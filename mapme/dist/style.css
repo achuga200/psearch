@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+.innerEdit{font-size: 20px; padding: 10px;}
+#outputCelcius{font-size: 24px;border: 20px;padding: }
+
+.cont{
+  position: relative;
+  width: 25%;
+  height: 200px;
+  padding: 10px 25px;
+  margin: 10vh auto;
+  background: #FFA500;
+  border-radius: 8px;
+  margin-right: 55em;
+   opacity: 0.83;
+}
+
+/*.form{ width: 100%; height: 100%; }*/
+
+#headT{
+  color: #FF1493;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 30px auto;
+  text-align: center;
+  display: block;
+}
+
+.user{
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 30px 0px 30px 0px;
+  background: #ecf0f1;
+  text-align: center;
+  display: block;
+}
+
+@media only screen and (min-width : 280px) {
+  .cont{ width: 90% }
+}
+
+@media only screen and (min-width : 480px) {
+  .cont{ width: 60% }
+}
+
+@media only screen and (min-width : 768px) {
+  .cont{ width: 40% }
+}
+
+@media only screen and (min-width : 992px) {
+  .cont{ width: 30% }
+}
+
+h2,h1{ color: white; margin-top: 25px; }
+
+
+body{
+  background-image:url(https://www.visitrenotahoe.com/wp-content/uploads/2017/06/Tourist-Information-Hero-1.jpg);
+}
+
+ html,body,#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#logoDiv {
+  padding: 12px;
+  background-color: black;
+  color: pink;
+  text-align: center;
+  width: 100px;
+  }
