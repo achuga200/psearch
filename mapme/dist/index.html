@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>mapme</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Sara Search</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.12/esri/themes/light/main.css"/>
+  </head>
+
+   <h1 id ="headT">Sara Search</h1>
+    
+    <!---TEMPERATURE CONVERTION STARTS-->
+    <body>
+    <section>
+    <div class="cont">
+      <form>
+        <p id = 'convert'>
+          <label class="innerEdit">Convert From Fahrenheit To Celcius</label>
+        <input type="number" id="inputFahrenheit" placeholder="Enter Fahrenheit Value" class="user" oninput="temperatureConverter(this.value)"
+        onchange="temperatureConverter(this.value)">
+      </p>
+      <p class="innerEdit">Celcuis: <span id = "outputCelcius"></span></p>
+
+      </form>
+      
+    </div>
+  </section>
+
+<!---TEMPERATURE CONVERTION ENDS-->
+
+
+
+<!---ARCGIS DIV STARTS FOR MAP-->
+
+    <section>
+    <script src="https://js.arcgis.com/4.12/"></script>
+    <script>
+      require([
+        "esri/Map",
+        "esri/views/SceneView",
+        "esri/widgets/Search"
+      ], function(Map, SceneView, Search) {
+        var map = new Map({
+          basemap: "dark-gray"
+        });
+        var view = new SceneView({
+          map: map,
+          container: "viewDiv",
+          center: [2.3488,48.85341],
+          zoom: 14
+        });
+        // use widgets which is not in the Default UI
+        var search = new Search({
+          view: view
+        });
+        //add widgets on the UI
+        view.ui.add("logoDiv", "bottom-right");
+        view.ui.add(search, "top-right"); 
+        
+        //
+        view.on("keypress", function(event){
+            
+          if (view.zoom >=16) {
+            view.ui.remove(["logoDiv",search]);
+          } 
+              }); 
+      });
+      
+      
+    </script>
+  </section>
+    
+
+    <p>
+    <div id="viewDiv"></div>
+    <div id="logoDiv" class="esri-widget">Logo</div></p>
+  </body>
+  <script src="script.js"></script>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
