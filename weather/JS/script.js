@@ -1,4 +1,4 @@
-let key = "7727eb7a7ad3adf1d307938860eca01b"//"<<Replace it With your API Key>>" Don't have a key? Get it for free from openweathermap.org
+let key = "b2cdbb1396913a282b1da67df9cf54de"//"<<Replace it With your API Key>>" Don't have a key? Get it for free from openweathermap.org
 var cityName = "";
 var link = "";
 var link_trend = "";
